@@ -1,0 +1,23 @@
+{
+  "name": "fe_machinecompany_01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DangVanDu/FE_MachineCompany_01.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DangVanDu/FE_MachineCompany_01/issues"
+  },
+  "homepage": "https://github.com/DangVanDu/FE_MachineCompany_01#readme"
+}
