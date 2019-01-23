@@ -1,0 +1,48 @@
+#section{
+  .section-top{
+    @include margin(30px,0,0,0);
+    @include padding(0,0,34px,0);
+    border-bottom: 1px solid $color-gray;
+    a{
+      color: $color-gray-5;
+    }
+  }
+  .section-form{
+    h3{
+      @include margin(34px,0,22px,0);
+      @include font-weight;
+      @include font-size(14px);
+      @include uppercase;
+    }
+    span{
+      color: $color-red;
+    }
+    label{
+      @include margin(23px,0,22px,0);
+    }
+    input{
+      @include border-style(2px,solid,$color-border);
+      width: 100%;
+      box-sizing:border-box;
+      @include padding(11px,0,11px,0);
+    }
+    .checkbox{
+      font-style:italic;
+      color:$color-gray-7;
+    } 
+    input[type=checkbox]{
+      @include margin(30px,12px,8px,0);
+      width: 15px;
+    }
+  }
+  .button-group{
+    @include margin(40px,0,0,0,);
+    a{
+      @extend %button;
+      @include margin(0,10px,0,0);
+      &:hover{
+        @extend %bt-slider__hover;
+      }
+    } 
+  }
+}
