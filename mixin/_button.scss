@@ -1,0 +1,16 @@
+%button{
+	padding:15px 22px;
+	background-color: $color-yellow;
+	color: $color-white;
+}
+
+%bt-slider__hover{
+	background-color: $color-black;
+	color:$color-white;
+}
+%button-product{
+	padding:10px 6px;
+	background-color: $color-black-4;
+	color: $color-white;
+	@include font-weight;
+}
