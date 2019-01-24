@@ -1,0 +1,78 @@
+#footer{
+	.footer__title{
+		@include flexible(flex,null,center);
+		@include margin(60px,0,30px,0);
+		img{
+			width: 10px;
+			height: 10px;
+		}
+		h2{
+			color: $color-black;
+			@include margin(1px,0,0,5px);
+			@include font-size(16px);
+			@include font-weight;
+		}
+	}
+	p{
+		color: $color-black-3;
+		@include font-size(13px);
+	}
+	a{
+		@extend p;
+	}
+	.divider{
+		border-bottom: 1px solid gray;
+		@include margin(30px,0,30px,0);
+	}
+	.footer__map{
+		@include flexible(flex,null,center);
+		@include margin(10px,0,10px,0);
+		span{
+			@include margin(0,5px,0,0);
+		}
+	}
+	.footer__email{
+		@extend .footer__map;
+	}
+	.footer__phone{
+		@extend .footer__map;
+	}
+	h3{
+		@extend p;
+		@extend .footer__map;
+	}
+	.footer__advisory{
+		@include flexible(flex,null,center);
+		span{
+			color: $color-yellow;
+			@include border-radius-short(50%);
+			@include border-style(1px,solid,$color-yellow);
+			@include padding-short(10px);
+			@include margin(0,5px,0,5px);
+		}
+	}
+	.footer__chat{
+		@extend .footer__advisory;
+	}
+	.footer__down{
+		background-color:$color-black;
+		@include padding(20px,0,20px,0);
+		@include margin(30px,0,30px,0);
+		span{
+			color: $color-white;
+		}
+		p{
+			@include font-size(11px);
+		}
+		&__menu{
+			ul{
+				@include flexible(flex,space-between,null);
+				li{
+					a{
+						@include font-size(10px);
+					}
+				}
+			}
+		}
+	}
+}
