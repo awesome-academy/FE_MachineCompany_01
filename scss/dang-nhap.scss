@@ -1,0 +1,39 @@
+#section{
+  .section-top{
+    @extend .section-top;
+    a{
+      @extend a;
+    }
+  }
+  .section-form{
+    a{
+      @extend %button;
+      &:hover{
+        @extend %bt-slider__hover;
+      }
+    }
+    &__checkbox{
+      @include flexible(flex,space-between,center);
+      @include margin(30px,0,44px,0);
+      form{
+        color:$color-gray-5;
+        input[type=checkbox]{
+          @include margin-short(0);
+        }
+      }
+      p{
+        color:$color-yellow;
+        @include font-size(14px);
+        text-decoration: underline;
+      }
+    }
+    &__content{
+      p:nth-child(2n){
+        @include font-size(14px);
+        color:$color-gray-5;
+        font-weight:100;
+        @include margin(0,0,30px,0);
+      }
+    }
+  }
+}

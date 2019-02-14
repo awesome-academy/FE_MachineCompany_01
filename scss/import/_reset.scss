@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
+
+body, html, ul, li, p, h1, h2, h3, h4, h5, h6, a {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+@media screen and (min-width: 768px) and (max-width: 991px){
+  a{
+    font-size: 11px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  p{
+    font-size: 11px;
+  }
+}
+a {
+  text-decoration: none;
+
+    &:hover{
+    		text-decoration: none;
+    	}
+      
+   }
+
+ul li {
+  list-style-type: none; }

@@ -1,0 +1,58 @@
+@mixin padding($padding-top,$padding-right,$padding-bottom,$padding-left){
+  padding-top: $padding-top;
+  padding-right: $padding-right;
+  padding-bottom: $padding-bottom;
+  padding-left: $padding-left;
+}
+
+@mixin padding-short($padding){
+  padding: $padding;
+}
+
+@mixin margin($margin-top,$margin-right,$margin-bottom,$margin-left){
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+}
+@mixin margin-short($margin){
+  margin: $margin;
+}
+%center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin uppercase{
+  text-transform: uppercase;
+}
+@mixin float($property){
+  float: $property;
+}
+@mixin flexible($flex,$justify-content,$align-items){
+  display: $flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+@mixin relative{
+  position: relative;
+}
+@mixin absolute($absolute,$top,$right){ 
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+@mixin w-100{
+  width:100%;
+}
+%center-2{
+  text-align: center;
+}
+%hover{
+  background: $color-yellow;
+  color: $color-white;
+}
+%icon{
+  width: 10px;
+  height: 10px;
+}

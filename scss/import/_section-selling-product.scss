@@ -1,0 +1,55 @@
+.section-5{
+  @include margin(60px,0,0,0);
+  &__title{
+    @extend .section-3__title;
+    &__product{
+      @extend .section-3__title__product;
+    }
+    &__right{
+      @include flexible(flex,null,null);
+    }
+    &__menu{
+      @extend .section-3__title__menu;
+    }
+  }
+  .mt{
+    margin-top: 15px;
+  }
+  .row{
+    height: 710px;
+  }
+  @media screen and (max-width: 767px){
+    .row{
+      height: 50%;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px){
+    .row{
+      height: 50%;
+    }
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px){
+    .row{
+      height: 700px;
+    }
+  }
+  &__card{
+    @extend .section-3__card;
+    &__img{
+      @extend .section-3__card__img;
+      @include margin-short(0);
+    }
+    &__img-2{
+      @include margin(149px,0,218px,0);
+    }
+    &__button{
+      @extend .section-3__card__button;
+    }
+
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px){
+    &__card{
+      margin-top: 20px;
+    }
+  }
+}

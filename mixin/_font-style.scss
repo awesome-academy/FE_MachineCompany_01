@@ -1,0 +1,6 @@
+@mixin font-size($property){
+  font-size:$property;
+}
+@mixin font-weight{
+  font-weight:bold;
+}
