@@ -1,0 +1,144 @@
+#section{
+  .section-blog__list-new{
+    @extend .section-2;
+    ul{
+      li{
+        @include padding(25px,0,25px,0);
+        border-bottom:1px solid $color-gray-4;
+        a{
+          color: $color-gray-4;
+          @include font-size(13px);
+          &:hover{
+            color: $color-yellow;
+          }
+        }
+      }
+      li:first-child{
+        border-bottom:2px solid $color-yellow;
+        &:hover{
+          background-color: $color-black;
+        }
+        span{
+          @include margin(0,11px,0,0,);
+        }
+      }
+    }
+  }
+  .section-blog__library-images{
+    @extend .section-2;
+    &__title{
+      color: $color-gray-4;
+      @include margin(30px,0,30px,0);
+      span{
+        @include margin(0,11px,0,0,);
+        color: $color-yellow;
+      }
+    }
+    ul{
+      li{
+        float: left;
+        img{
+          width: 83px;
+          height: 83px;
+        }
+      }
+    }
+  }
+  .section-blog__tags{
+    @include margin(225px,0,0,0);
+    &__title{
+      @include margin(0,0,30px,0,);
+      span{
+        @include margin(0,11px,30px,0,);
+        color: $color-yellow;
+      }
+    }
+    ul{
+      li{
+        float:left;
+        @include border-style(1px,solid,$color-gray);
+        @include padding(5px,10px,5px,10px);
+        @include margin(0,5px,5px,0);
+        &:hover{
+          background-color: $color-black;
+          color: $color-white;
+        }
+        a{
+          @include font-size(13px);
+          color: $color-gray-4;
+          font-style: italic;
+        }
+      }
+    }
+  }
+  .section-blog__contents{
+    &__top{
+      @include padding(0,0,40px,0);
+      @include margin(0,0,40px,0);
+      border-bottom: 1px solid $color-gray;
+      img{
+        width: 100%;
+      }
+    }
+    &__center{
+      @extend .section-blog__contents__top;
+    }
+    &__center-2{
+      @extend .section-blog__contents__top;
+    }
+    &__bottom{
+      @extend .section-blog__contents__top;
+    }
+    p{
+      @include font-size(13px);
+    }
+    h3{
+      @include font-size(16px);
+      @include margin(25px,0,16px,0);
+      color: $color-black-4;
+      @include font-weight;
+    }
+    &__time{
+      @include flexible(flex,null,center);
+      p{
+        @include margin(0,15px,0,0);
+        @include flexible(flex,null,center);
+        color: $color-gray-4;
+        span:nth-child(2n){
+          color: $color-yellow;
+        }
+      }
+      p:first-child{
+        font-style: italic;
+      }
+    }
+    &__content{
+      a{
+        color: $color-yellow;
+      }
+    }
+  }
+  @media screen and (max-width: 768px){
+    img{
+      width: 100%;
+    }
+  }
+  .section-blog__contents__button{
+    text-align: end;
+    a{
+      @extend %button-white;
+      @include border-style(1px,solid,$color-gray-4);
+      @include margin(0,5px,0,0);
+      @include font-size(13px);
+      &:hover{
+        @extend %button;
+        @include border-style(1px,solid,$color-yellow);
+      }
+    }
+    @media screen and (max-width: 767px){
+      a{
+        @include font-size(8px);
+      }
+    }
+  }
+}

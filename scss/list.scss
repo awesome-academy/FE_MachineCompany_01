@@ -1,0 +1,133 @@
+.section-1{
+  @include flexible(flex,null,center);
+}
+.section-2{
+  &__upper{
+    @include flexible(flex,space-between,center);
+    @include margin(0,0,20px,0);
+    &__sort{
+      @extend .section-2__upper;
+      width: 40%;
+    }
+    &__number{
+      @extend .section-2__upper;
+      width: 15%;
+    }
+    &__icon{
+      @extend .section-2__upper;
+      width: 8%;
+      span{
+        @include padding-short(5px);
+        @include border-style(1px,solid,$color-gray-3);
+      }
+    }
+  }
+  @media screen and (max-width: 767px){
+    &__upper{
+      width: 100%;
+    }
+  }
+  &__product{
+    ul{
+      li{
+        a{
+          span.red{
+            color:$color-red;
+          }
+          span.yellow{
+            color:$color-yellow;
+          }
+          span.blue{
+            color:$color-blue;
+          }
+          span.gray{
+            color:$color-gray-2;
+          }
+          span.black{
+            color:$color-black-4;
+          }
+        }
+      }
+    }
+  }
+  &__product-list-4{
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+    @include margin(0,0,30px,0);
+    ul{
+      li{
+        @include padding(25px,0,25px,0);
+        border-bottom:1px solid $color-gray-4;
+        a{
+          color: $color-black;
+          @include flexible(flex,null,center);
+          @include margin(0,0,0,14px);
+          &:hover{
+            color: $color-yellow;
+          }
+          img{
+            @include margin(0,18px,8px,0);
+          }
+          span{
+            @include margin(0,12px,0,0);
+          }
+        }
+      }
+      li:first-child{
+        @include padding(25px,0,25px,0px);
+        a{
+          color: $color-gray-4;
+          &:hover{
+            color: $color-yellow;
+          }
+        }
+      }
+      li:first-child:hover{
+        background-color: $color-black;
+      }
+    }
+    &__content{
+      p{
+        @include font-size(14px);
+        @include font-weight;
+      }
+      p:last-child{
+        color: $color-red;
+      }
+    }
+  }
+}
+
+.pagination{
+  @include flexible(flex,flex-end,null);
+  a{
+    @include padding(10px,20px,10px,20px);
+    @include border-style(1px,solid,$color-gray-3);
+    @include margin(0,0,0,5px);
+    color: $color-black;
+    &:hover{
+      background-color: $color-yellow;
+      color: $color-white;
+      border:none; 
+    }
+  }
+}
+@media screen and (max-width: 767px){
+  .pagination{
+    @include flexible(flex,center,null);
+  }
+  .pagination a:first-child{
+    @include margin(0,0,0,0);
+  }
+  .pagination a{
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 767px){
+  .section-7__card {
+    flex-direction: column;
+    padding-top: 15px;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+}

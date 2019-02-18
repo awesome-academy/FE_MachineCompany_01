@@ -1,0 +1,68 @@
+#section{
+  table,tr,td,th{
+    @include border-style(1px,solid,$color-border);
+    @extend %center-2;
+    color: $color-black-4;
+    @include font-size(18px);
+  }
+  .product{
+    overflow-x:auto;
+    &__table{
+      width: 100%;
+      border-collapse: collapse;
+      @include margin(60px,0,0,0);
+      thead{
+        tr{
+          th{
+            @include padding(33px,0,33px,0);
+          }
+        }
+      }
+      input[type=number]{
+        width: 40px;
+        height: 40px;
+        @extend %center-2;
+        @include border-style(1px,solid,$color-border); 
+      }
+      img{
+        width: 145px;
+        height: 105px;
+        @include margin(43px,0,48px,0);
+      }
+      .close{
+        width: 100%;
+        color: $color-red-2;
+      }
+    }
+  }
+  .price{
+    @include flexible(flex,flex-end,null);
+    @include margin(30px,0,0,0);
+    &__text{
+      width: 284px;
+      height: 60px;
+    }
+    &__number{
+      width: 204px;
+      height: 60px;
+    }
+    &__number-color{
+      color:$color-red-2;
+    } 
+  }
+  .group-button{
+    @include flexible(flex,flex-end,null);
+    a{
+      @extend %button;
+      @include margin(21px,0,0,15px);
+      &:hover{
+        @extend %bt-slider__hover;
+      }
+    }
+    @media screen and (max-width: 767px){
+      a{
+        @include font-size(10px);
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import "import/icon";
+@import "import/reset";
+@import "../mixin/font-style";
+@import "../varibles/color";
+@import "../mixin/alignment";
+@import "../mixin/border-style";
+@import "../mixin/button";
+
+/*===========================header============================*/
+@import "import/header";
+/*===========================section-1============================*/
+@import "import/section-sldier";
+/*===========================section-2============================*/
+@import "import/section-hot-product";
+/*===========================section-3============================*/
+@import "import/section-new-product";
+/*===========================section-4============================*/
+@import "import/section-banner-mid";
+/*===========================section-5============================*/
+@import "import/section-selling-product";
+/*===========================section-6============================*/
+@import "import/section-banner-2";
+/*===========================section-7============================*/
+@import "import/section-new-products";
+/*===========================section-8============================*/
+@import "import/section-brand";
+/*===========================section-9============================*/
+@import "import/section-newsletter";
+/*===========================footer============================*/
+@import "import/footer";
+
+@import "list";
+
+@import "error-page";
+
+@import "dang-ky";
+
+@import "dang-nhap";
+
+@import "shopping-cart";
+
+@import "blog";
+
+@import "blog-details";

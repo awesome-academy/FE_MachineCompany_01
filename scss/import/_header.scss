@@ -1,0 +1,106 @@
+.top-upper{
+  @extend %center;
+  background: $color-gray;
+  .top-upper__left ul{
+    li{
+      @include float(left);
+      a{
+        @include padding(10px,17px,10px,17px);
+        @extend %center;
+        color: $color-icon;
+        &:hover{
+          @extend %hover;
+        }
+      }
+    }
+  } 
+  .top-upper__right{
+    @extend .top-upper__left;
+    @include float(right);
+    @include font-size(12px);
+    @include font-weight;
+    @include uppercase;
+  }
+}
+@media screen and (max-width: 767px){
+  .top-upper__left,.top-upper__right {
+    @include flexible(flex,center,null);
+    @include w-100;
+  }
+}
+.top-down{
+  @include margin(0,0,17px,0);
+  .top-down__logo{
+    @include margin(15px,0,0,0);
+  }
+  .top-down__phone{
+    @include flexible(flex,space-around,center);
+    @include margin(42px,0,0,0);
+    ul{
+      @include font-size(14px);
+      @include uppercase;
+      li:first-child{
+        color: $color-yellow;
+        @include font-weight;
+      }
+      li:last-child{
+        @include font-size(13px);
+        color: $color-gray-2;
+      }
+    }
+  }
+  @media screen and (max-width: 767px){
+    .top-down__logo{
+      @include flexible(flex,center,null);
+    }
+    .top-down__phone{
+      display: none;
+    }
+  }
+  .top-down__search{
+    @include relative;
+    @include margin(36px,0,0,0);
+  }
+  input[type=search]{
+    @include border-style(1px,solid,$color-border);
+    @include border-radius-short(20px);
+    @include w-100;
+    outline:none;
+    height: 40px;
+  }
+  ::placeholder{
+    color: $color-gray-2;
+  }
+  .icon-search1{
+    @include absolute(absolute,11px,15px);
+    color: $color-gray-2;
+  }
+}
+.navbar{
+  @include padding-short(0);
+  .navbar-nav{
+    .nav-item{
+      .nav-link{
+        @include uppercase;
+        @include padding(15px,20px,15px,20px);
+        @include font-size(14px);
+        color: $color-white;
+        &:hover{
+          @extend %hover;
+        }
+      }
+      @media screen and (min-width: 768px) and (max-width: 1199px){
+        .nav-link{
+          @include font-size(12px);
+        }
+      } 
+    }
+  }
+  @media screen and (max-width: 767px){
+    img{
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
